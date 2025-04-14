@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Castelo Bruxo</title>
-  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.cdnfonts.com/css/harry-p" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -14,27 +14,29 @@
       background-attachment: fixed;
       color: #d4af37;
     }
-    .banner-container {
-      text-align: center;
-      background-color: rgba(0, 100, 0, 0.9);
-      padding: 20px;
-    }
-    .banner {
-      max-width: 100%;
-      height: auto;
-    }
+
     header {
       text-align: center;
       background-color: rgba(0, 100, 0, 0.9);
       padding: 10px;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
+      font-family: 'Harry P', Georgia, serif;
+      color: #d4af37;
     }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+    }
+
     #menu-toggle {
       display: none;
     }
+
     .menu-icon {
       display: none;
       font-size: 30px;
@@ -43,6 +45,7 @@
       color: #d4af37;
       cursor: pointer;
     }
+
     nav.mobile-menu ul {
       list-style: none;
       margin: 0;
@@ -52,19 +55,33 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
     nav.mobile-menu ul li {
       position: relative;
     }
+
+    nav.mobile-menu ul li > a:after {
+      content: ' ▼';
+      font-size: 0.8em;
+    }
+
+    nav.mobile-menu ul li:not(:has(ul)) > a:after {
+      content: '';
+    }
+
     nav.mobile-menu ul li a {
       display: block;
       padding: 10px 15px;
       text-decoration: none;
       color: #d4af37;
       font-weight: bold;
+      font-family: 'Harry P', Georgia, serif;
     }
+
     nav.mobile-menu ul li:hover > a {
       background-color: #006400;
     }
+
     nav.mobile-menu ul li ul {
       display: none;
       position: absolute;
@@ -74,12 +91,15 @@
       min-width: 200px;
       z-index: 1000;
     }
+
     nav.mobile-menu ul li:hover ul {
       display: block;
     }
+
     nav.mobile-menu ul li ul li a {
       padding: 10px;
     }
+
     nav.mobile-menu ul li ul li a:hover {
       background-color: #004d00;
     }
@@ -90,6 +110,19 @@
       padding: 20px;
       border-radius: 10px;
       color: #003300;
+    }
+
+    main h1 {
+      font-family: 'Harry P', Georgia, serif;
+      color: #d4af37;
+      font-size: 2.2em;
+      margin-top: 0;
+    }
+
+    main h2 {
+      font-size: 1.5em;
+      color: #003300;
+      font-weight: bold;
     }
 
     .botao-magico {
@@ -134,6 +167,31 @@
         width: 100%;
       }
 
+      nav.mobile-menu ul li a {
+        padding: 12px 20px;
+        font-size: 1em;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      main h1 {
+        font-size: 1.8em;
+      }
+
+      main h2 {
+        font-size: 1.2em;
+      }
+
+      main p {
+        font-size: 1em;
+      }
+
       nav.mobile-menu ul li ul {
         position: static;
       }
@@ -141,10 +199,6 @@
   </style>
 </head>
 <body>
-  <div class="banner-container">
-    <img class="banner" src="banner.jpg" alt="Castelobruxo Banner"/>
-  </div>
-
   <header>
     <h1>Castelo Bruxo</h1>
     <p>A magia da floresta vive aqui</p>
