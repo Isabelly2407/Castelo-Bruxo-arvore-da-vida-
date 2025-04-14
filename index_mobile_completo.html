@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Castelo Bruxo</title>
+<link href="style.css" rel="stylesheet"/>
+<style>
+    #menu-toggle {
+      display: none;
+    }
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      padding: 10px;
+      background-color: #006400;
+      color: #d4af37;
+      cursor: pointer;
+    }
+    nav.mobile-menu ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+        text-align: left;
+      }
+      nav.mobile-menu ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(0, 100, 0, 0.95);
+        padding: 10px;
+      }
+      #menu-toggle:checked + .menu-icon + nav.mobile-menu ul {
+        display: flex;
+      }
+      nav.mobile-menu ul li {
+        width: 100%;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-image: url('fundo-pergaminho.png');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #d4af37;
+    }
+    header, .banner-container {
+      text-align: center;
+      background-color: rgba(0, 100, 0, 0.9);
+      padding: 20px;
+    }
+    .banner {
+      max-width: 100%;
+      height: auto;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 100, 0, 0.9);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #d4af37;
+      font-weight: bold;
+    }
+    nav ul li:hover > a {
+      background-color: #006400;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 100, 0, 0.9);
+      min-width: 200px;
+      z-index: 1000;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li a {
+      padding: 10px;
+    }
+    nav ul li ul li a:hover {
+      background-color: #004d00;
+    }
+    .conteudo {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      color: #003300;
+    }
+    .botao-magico {
+      display: inline-block;
+      background-color: #006400;
+      color: #d4af37;
+      padding: 10px 20px;
+      margin: 10px 0;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .botao-magico:hover {
+      background-color: #004d00;
+    }
+    footer {
+      background-color: rgba(0, 100, 0, 0.9);
+      color: #d4af37;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<div class="banner-container">
+<img alt="Castelobruxo Banner" class="banner" src="banner.jpg"/>
+</div>
+<header>
+<h1>Castelo Bruxo</h1>
+<p>A magia da floresta vive aqui</p>
+</header>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-icon" for="menu-toggle">☰</label>
+<nav class="mobile-menu">
+<ul><li><a href="index.html">Início</a></li><li><a href="grade.html">Grade Horária</a></li><li><a href="varinhas.html">Varinhas</a><ul><li><a href="nucleos.html">Núcleos de Varinha</a></li><li><a href="madeiras.html">Madeiras para Varinha</a></li></ul></li><li><a href="patronos.html">Patronos</a><ul><li><a href="comuns.html">Animais Comuns</a></li><li><a href="miticos.html">Animais Míticos</a></li></ul></li><li><a href="uniformes.html">Uniforme</a><ul><li><a href="feminino.html">Uniforme Feminino</a></li><li><a href="masculino.html">Uniforme Masculino</a></li></ul></li><li><a href="historia.html">História</a></li><li><a href="casas.html">Casas</a><ul><li><a href="jaguares.html">Jaguares</a></li><li><a href="gavios.html">Gaviões Reais</a></li><li><a href="rupicola.html">Rupicola</a></li><li><a href="botos.html">Botos</a></li></ul></li><li><a href="personagens.html">Personagens</a></li><li><a href="magias.html">Magias</a></li><li><a href="criaturas.html">Criaturas</a><ul><li><a href="fauna-comum.html">Fauna Comum</a></li><li><a href="fauna-magica.html">Fauna Mágica</a></li></ul></li></ul>
+</nav>
+<main class="conteudo">
+<h2>Descubra os Segredos de Castelobruxo</h2>
+<a class="botao-magico" href="varinhas.html">Explore sua Varinha</a>
+<h1>CasteloBruxo: A Árvore da Vida</h1>
+<p>
+      Bem-vindo ao RPG mágico ambientado no coração da floresta amazônica. Aqui, você vai explorar os mistérios de Castelobruxo, dominar feitiços ancestrais, criar sua própria varinha e descobrir os segredos escondidos sob as raízes da árvore da vida. 
+    </p>
+<p>
+      Com uma estética inspirada nos povos originários e mitos sul-americanos, o RPG proporciona uma experiência única de aprendizado, exploração e magia em um mundo encantado brasileiro.
+    </p>
+</main>
+<footer>
+    © 2054 Castelo Bruxo - Todos os direitos reservados
+  </footer>
+</body>
+</html>
