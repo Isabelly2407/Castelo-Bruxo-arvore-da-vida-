@@ -1,42 +1,193 @@
-
-/* Banner no topo */
-header {
-  background-image: url('banner.jpg');
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background-image: url('fundo-pergaminho.png');
   background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #bfa940;
-  font-size: 3em;
-  text-shadow: 2px 2px 4px #000;
-}
-
-header h1 {
-  font-family: 'Harry P', serif;
+  background-attachment: fixed;
   color: #d4af37;
 }
 
-/* Fundo de pergaminho para todo o corpo da página */
-body {
-  background-image: url('pergaminho.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: 'Georgia', serif;
-  color: #083c00;
-  margin: 0;
-  padding: 0;
+header {
+  text-align: center;
+  background-color: rgba(0, 100, 0, 0.9);
+  padding: 10px;
 }
 
-/* Conteúdo com moldura e transparência */
-.main-content {
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 2rem auto;
-  padding: 2rem;
-  max-width: 800px;
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-family: 'Harry P', Georgia, serif;
+  color: #d4af37;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  padding: 12px;
+  background-color: #004d00;
+  color: #d4af37;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #d4af37;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.menu-icon:hover {
+  background-color: #006400;
+}
+
+nav.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 100, 0, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav.mobile-menu ul li {
+  position: relative;
+}
+
+nav.mobile-menu ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+nav.mobile-menu ul li:hover > a {
+  background-color: #006400;
+}
+
+nav.mobile-menu ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 100, 0, 0.95);
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav.mobile-menu ul li:hover ul {
+  display: block;
+}
+
+nav.mobile-menu ul li ul li a {
+  padding: 10px;
+}
+
+nav.mobile-menu ul li ul li a:hover {
+  background-color: #004d00;
+}
+
+nav.mobile-menu ul li > a:after {
+  content: " ▼";
+  font-size: 0.8em;
+}
+
+nav.mobile-menu ul li:not(:has(ul)) > a:after {
+  content: "";
+}
+
+main.conteudo {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 20px auto;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  color: #003300;
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+}
+
+main h1, main h2 {
+  font-family: 'Harry P', Georgia, serif;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+main h1 {
+  font-size: 2.5em;
+}
+
+main h2 {
+  font-size: 1.8em;
+}
+
+main p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.botao-magico {
+  display: inline-block;
+  background-color: #006400;
+  color: #d4af37;
+  padding: 10px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.botao-magico:hover {
+  background-color: #004d00;
+}
+
+footer {
+  background-color: rgba(0, 100, 0, 0.9);
+  color: #d4af37;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav.mobile-menu ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav.mobile-menu ul {
+    display: flex;
+  }
+
+  nav.mobile-menu ul li {
+    width: 100%;
+  }
+
+  nav.mobile-menu ul li ul {
+    position: static;
+  }
+
+  main h1 {
+    font-size: 1.8em;
+  }
+
+  main h2 {
+    font-size: 1.4em;
+  }
+
+  main p {
+    font-size: 1em;
+  }
 }
