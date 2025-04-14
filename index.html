@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Castelo Bruxo</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castelo Bruxo</title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'HarryP';
+      src: url('HarryP.woff') format('woff');
+    }
+  </style>
 </head>
 <body>
-    <!-- Container Parallax -->
-    <div class="parallax-container">
-        <header>
-            <h1 class="site-title">Castelo Bruxo</h1>
-        </header>
-
-        <!-- Seção de Apresentação -->
-        <div class="content">
-            <section class="intro">
-                <p class="intro-text">Bem-vindo ao Castelo Bruxo, um lugar cheio de mistérios, magia e criaturas fantásticas.</p>
-                <!-- O conteúdo original da página inicial permanece aqui -->
-            </section>
-        </div>
+  <header class="cabecalho">
+    <div class="overlay">
+      <h1>Castelo Bruxo</h1>
+      <p>A magia da floresta vive aqui</p>
     </div>
+  </header>
 
-    <!-- Navegação do site -->
-    <nav class="menu">
+  <input type="checkbox" id="menu-toggle">
+  <label class="menu-icon" for="menu-toggle"><i class="fas fa-wand-sparkles"></i> Menu</label>
+  <nav class="mobile-menu">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+      <li><a href="grade.html"><i class="fas fa-calendar-alt"></i> Grade Horária</a></li>
+      <li class="has-submenu">
+        <a href="#"><i class="fas fa-wand-magic-sparkles"></i> Varinhas <span class="submenu-toggle">▼</span></a>
         <ul>
-            <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="categorias.html">Categorias</a></li>
-            <li><a href="subcategorias.html">Subcategorias</a></li>
+          <li><a href="nucleos.html">Núcleos de Varinha</a></li>
+          <li><a href="madeiras.html">Madeiras para Varinha</a></li>
         </ul>
-    </nav>
+      </li>
+      <li class="has-submenu">
+        <a href="patronos.html"><i class="fas fa-paw"></i> Patronos <span class="submenu-toggle">▼</span></a>
+        <ul>
+          <li><a href="comuns.html">Animais Comuns</a></li>
+          <li><a href="miticos.html">Animais Míticos</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#"><i class="fas fa-tshirt"></i> Uniforme <span class="submenu-toggle">▼</span></a>
+        <ul>
+          <li><a href="feminino.html">Uniforme Feminino</a></li>
+          <li><a href="masculino.html">Uniforme Masculino</a></li>
+        </ul>
+      </li>
+      <li><a href="historia.html"><i class="fas fa-landmark"></i> História</a></li>
+      <li class="has-submenu">
+        <a href="#"><i class="fas fa-dragon"></i> Casas <span class="submenu-toggle">▼</span></a>
+        <ul>
+          <li><a href="jaguares.html">Jaguares</a></li>
+          <li><a href="gavios.html">Gaviões Reais</a></li>
+          <li><a href="rupicola.html">Rupicola</a></li>
+          <li><a href="botos.html">Botos</a></li>
+        </ul>
+      </li>
+      <li><a href="personagens.html"><i class="fas fa-user"></i> Personagens</a></li>
+      <li><a href="magias.html"><i class="fas fa-star"></i> Magias</a></li>
+      <li class="has-submenu">
+        <a href="#"><i class="fas fa-spider"></i> Criaturas <span class="submenu-toggle">▼</span></a>
+        <ul>
+          <li><a href="fauna-comum.html">Fauna Comum</a></li>
+          <li><a href="fauna-magica.html">Fauna Mágica</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-    <!-- Scripts (se houver) -->
-    <script>
-        // Seu código JavaScript (se houver)
-    </script>
+  <main class="conteudo">
+    <h2>Descubra os Segredos de Castelobruxo</h2>
+    <p>CasteloBruxo é um RPG escolar situado na floresta amazônica. Com casas inspiradas na fauna brasileira e magias baseadas em mitologia e saberes sul-americanos, ele oferece uma experiência única onde o jogador vivencia a jornada de um bruxo brasileiro em formação. Explore, aprenda, descubra e se conecte com a natureza e o mistério.</p>
+  </main>
+
+  <footer>
+    © 2054 Castelo Bruxo - Todos os direitos reservados
+  </footer>
+
+  <script>
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', e => {
+        e.preventDefault();
+        const li = toggle.closest('li');
+        li.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
-
-<div class="parallax">
-    <div class="parallax-content">
-        <!-- Conteúdo existente da página inicial -->
-        <h1 class="site-title">Castelo Bruxo</h1>
-        <p>Bem-vindo ao RPG mágico ambientado no coração da floresta amazônica...</p>
-        <!-- Outras seções e elementos -->
-    </div>
-</div>
