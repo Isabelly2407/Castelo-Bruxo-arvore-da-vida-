@@ -4,13 +4,14 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Castelo Bruxo</title>
-
-  <!-- Fonte Harry Potter -->
-  <link href="https://fonts.cdnfonts.com/css/harry-p" rel="stylesheet">
-  <!-- Font Awesome (com CDN público gratuito) -->
-  <script src="https://kit.fontawesome.com/4e82b3a418.js" crossorigin="anonymous"></script>
-
   <link href="style.css" rel="stylesheet"/>
+
+  <!-- Fonte Harry P -->
+  <link href="https://fonts.cdnfonts.com/css/harry-p" rel="stylesheet">
+
+  <!-- Ícones mágicos -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script> <!-- Substitua 'your-kit-id' pelo seu ID do FontAwesome -->
+
   <style>
     body {
       margin: 0;
@@ -24,47 +25,39 @@
     header {
       text-align: center;
       background-color: rgba(0, 100, 0, 0.9);
-      padding: 10px;
+      padding: 20px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
       font-family: 'Harry P', Georgia, serif;
+      font-size: 2.5em;
+      margin: 0;
       color: #d4af37;
     }
 
     header p {
-      margin: 5px 0 0;
+      margin-top: 5px;
       font-size: 1.2em;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      padding: 10px;
+      background-color: #006400;
+      color: #d4af37;
+      cursor: pointer;
     }
 
     #menu-toggle {
       display: none;
     }
 
-    .menu-icon {
-      display: none;
-      font-size: 28px;
-      padding: 12px;
-      background-color: #004d00;
-      color: #d4af37;
-      cursor: pointer;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #d4af37;
-      transition: background-color 0.3s ease;
-      margin: 10px;
-    }
-
-    .menu-icon:hover {
-      background-color: #006400;
-    }
-
     nav.mobile-menu ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      background-color: rgba(0, 100, 0, 0.9);
+      background-color: rgba(0, 100, 0, 0.95);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -74,77 +67,60 @@
       position: relative;
     }
 
-    nav.mobile-menu ul li a {
+    nav.mobile-menu ul li a,
+    .submenu-toggle {
       display: block;
       padding: 10px 15px;
       text-decoration: none;
       color: #d4af37;
       font-weight: bold;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
     }
 
-    nav.mobile-menu ul li:hover > a {
-      background-color: #006400;
-    }
-
-    nav.mobile-menu ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: rgba(0, 100, 0, 0.95);
-      min-width: 200px;
-      z-index: 1000;
-    }
-
-    nav.mobile-menu ul li:hover ul {
-      display: block;
-    }
-
-    nav.mobile-menu ul li ul li a {
-      padding: 10px;
-    }
-
-    nav.mobile-menu ul li ul li a:hover {
+    nav.mobile-menu ul li a:hover,
+    .submenu-toggle:hover {
       background-color: #004d00;
     }
 
-    nav.mobile-menu ul li > a:after {
-      content: " ▼";
-      font-size: 0.8em;
+    .submenu {
+      display: none;
+      flex-direction: column;
+      background-color: #003300;
+      border-left: 4px solid #d4af37;
+      margin-left: 15px;
+      padding-left: 10px;
     }
 
-    nav.mobile-menu ul li:not(:has(ul)) > a:after {
-      content: "";
+    .submenu-toggle .seta {
+      float: right;
+      transition: transform 0.3s ease;
+    }
+
+    .has-submenu.open .submenu {
+      display: flex;
+    }
+
+    .has-submenu.open .seta {
+      transform: rotate(180deg);
     }
 
     main.conteudo {
       background-color: rgba(255, 255, 255, 0.85);
-      margin: 20px auto;
+      margin: 20px;
       padding: 20px;
       border-radius: 10px;
       color: #003300;
-      max-width: 900px;
-      width: 90%;
       text-align: center;
     }
 
-    main h1, main h2 {
+    main h2, main h1 {
       font-family: 'Harry P', Georgia, serif;
       color: #d4af37;
-      margin-bottom: 15px;
-    }
-
-    main h1 {
-      font-size: 2.5em;
-    }
-
-    main h2 {
-      font-size: 1.8em;
-    }
-
-    main p {
-      font-size: 1.1em;
-      line-height: 1.6;
     }
 
     .botao-magico {
@@ -193,64 +169,72 @@
         position: static;
       }
 
-      main h1 {
-        font-size: 1.8em;
+      header h1 {
+        font-size: 2em;
       }
 
-      main h2 {
-        font-size: 1.4em;
-      }
-
-      main p {
+      header p {
         font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Castelo Bruxo</h1>
     <p>A magia da floresta vive aqui</p>
   </header>
 
   <input type="checkbox" id="menu-toggle"/>
-  <label class="menu-icon" for="menu-toggle"><i class="fas fa-hat-wizard"></i></label>
+  <label class="menu-icon" for="menu-toggle">☰ Menu</label>
 
   <nav class="mobile-menu">
     <ul>
       <li><a href="index.html"><i class="fas fa-hat-wizard"></i> Início</a></li>
-      <li><a href="grade.html"><i class="fas fa-scroll"></i> Grade Horária</a></li>
-      <li><a href="varinhas.html"><i class="fas fa-wand-magic-sparkles"></i> Varinhas</a>
-        <ul>
+
+      <li class="has-submenu">
+        <button class="submenu-toggle"><i class="fas fa-wand-magic-sparkles"></i> Varinhas <span class="seta">▼</span></button>
+        <ul class="submenu">
           <li><a href="nucleos.html">Núcleos de Varinha</a></li>
           <li><a href="madeiras.html">Madeiras para Varinha</a></li>
         </ul>
       </li>
-      <li><a href="patronos.html"><i class="fas fa-paw"></i> Patronos</a>
-        <ul>
+
+      <li class="has-submenu">
+        <button class="submenu-toggle"><i class="fas fa-paw"></i> Patronos <span class="seta">▼</span></button>
+        <ul class="submenu">
           <li><a href="comuns.html">Animais Comuns</a></li>
           <li><a href="miticos.html">Animais Míticos</a></li>
         </ul>
       </li>
-      <li><a href="uniformes.html"><i class="fas fa-tshirt"></i> Uniforme</a>
-        <ul>
+
+      <li class="has-submenu">
+        <button class="submenu-toggle"><i class="fas fa-tshirt"></i> Uniforme <span class="seta">▼</span></button>
+        <ul class="submenu">
           <li><a href="feminino.html">Uniforme Feminino</a></li>
           <li><a href="masculino.html">Uniforme Masculino</a></li>
         </ul>
       </li>
-      <li><a href="historia.html"><i class="fas fa-landmark"></i> História</a></li>
-      <li><a href="casas.html"><i class="fas fa-dragon"></i> Casas</a>
-        <ul>
+
+      <li class="has-submenu">
+        <button class="submenu-toggle"><i class="fas fa-dragon"></i> Casas <span class="seta">▼</span></button>
+        <ul class="submenu">
           <li><a href="jaguares.html">Jaguares</a></li>
           <li><a href="gavios.html">Gaviões Reais</a></li>
           <li><a href="rupicola.html">Rupicola</a></li>
           <li><a href="botos.html">Botos</a></li>
         </ul>
       </li>
+
+      <li><a href="grade.html"><i class="fas fa-scroll"></i> Grade Horária</a></li>
+      <li><a href="historia.html"><i class="fas fa-landmark"></i> História</a></li>
       <li><a href="personagens.html"><i class="fas fa-user-astronaut"></i> Personagens</a></li>
       <li><a href="magias.html"><i class="fas fa-bolt"></i> Magias</a></li>
-      <li><a href="criaturas.html"><i class="fas fa-dragon"></i> Criaturas</a>
-        <ul>
+
+      <li class="has-submenu">
+        <button class="submenu-toggle"><i class="fas fa-spider"></i> Criaturas <span class="seta">▼</span></button>
+        <ul class="submenu">
           <li><a href="fauna-comum.html">Fauna Comum</a></li>
           <li><a href="fauna-magica.html">Fauna Mágica</a></li>
         </ul>
@@ -268,5 +252,14 @@
   <footer>
     © 2054 Castelo Bruxo - Todos os direitos reservados
   </footer>
+
+  <script>
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const parent = toggle.closest('.has-submenu');
+        parent.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
