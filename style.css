@@ -1,14 +1,14 @@
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background-image: url ("pergaminho.png");
+  background-image: url("pergaminho.png");
   background-size: cover;
   background-attachment: fixed;
   color: #003300;
 }
 
-header.cabeçalho {
-  background-image: url ("banner.jpg");
+header.cabecalho {
+  background-image: url("banner.jpg");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -20,7 +20,7 @@ header.cabeçalho {
   animation: fadeIn 2s ease-out;
 }
 
-header.cabeçalho.overlay {
+header .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 12px;
@@ -37,7 +37,7 @@ header.cabecalho h1 {
 header.cabecalho p {
   font-size: 1.2em;
   margin-top: 10px;
-  color: ##f3e2b4;
+  color: #f3e2b4;
 }
 
 @keyframes fadeIn {
@@ -51,10 +51,11 @@ header.cabecalho p {
 }
 
 main.conteudo {
-  background-color: ##f3e2b4;
+  background-color: #f3e2b4;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
+  color: black;
 }
 
 footer {
