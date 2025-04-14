@@ -7,22 +7,47 @@ body {
   color: #d4af37;
 }
 
-header {
+header.cabecalho {
+  background-image: url('banner-castelobruxo.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   text-align: center;
-  background-color: rgba(0, 100, 0, 0.9);
-  padding: 10px;
+  animation: fadeIn 2s ease-out;
 }
 
-header h1 {
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+header.cabecalho .overlay {
+  background-color: rgba(0, 100, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+header.cabecalho h1 {
   margin: 0;
   font-size: 2.5em;
-  font-family: 'Harry P', Georgia, serif;
+  font-family: 'Harry P', serif;
   color: #d4af37;
+  animation: textGlow 1.5s ease-in-out infinite alternate;
 }
 
-header p {
-  margin: 5px 0 0;
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #d4af37; }
+  100% { text-shadow: 0 0 20px #d4af37, 0 0 40px #d4af37, 0 0 60px #d4af37; }
+}
+
+header.cabecalho p {
   font-size: 1.2em;
+  margin-top: 10px;
+  color: #f0e68c;
 }
 
 #menu-toggle {
@@ -31,19 +56,12 @@ header p {
 
 .menu-icon {
   display: none;
-  font-size: 28px;
-  padding: 12px;
-  background-color: #004d00;
+  font-size: 26px;
+  padding: 10px;
+  background-color: #004000;
   color: #d4af37;
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #d4af37;
-  transition: background-color 0.3s ease;
-  margin: 10px;
-}
-
-.menu-icon:hover {
-  background-color: #006400;
+  text-align: center;
 }
 
 nav.mobile-menu ul {
@@ -54,6 +72,12 @@ nav.mobile-menu ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
 }
 
 nav.mobile-menu ul li {
@@ -82,7 +106,7 @@ nav.mobile-menu ul li ul {
   z-index: 1000;
 }
 
-nav.mobile-menu ul li:hover ul {
+nav.mobile-menu ul li.open > ul {
   display: block;
 }
 
@@ -94,43 +118,17 @@ nav.mobile-menu ul li ul li a:hover {
   background-color: #004d00;
 }
 
-nav.mobile-menu ul li > a:after {
-  content: " ▼";
-  font-size: 0.8em;
-}
-
-nav.mobile-menu ul li:not(:has(ul)) > a:after {
-  content: "";
+.submenu-toggle {
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 main.conteudo {
   background-color: rgba(255, 255, 255, 0.85);
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px;
   border-radius: 10px;
   color: #003300;
-  max-width: 900px;
-  width: 90%;
-  text-align: center;
-}
-
-main h1, main h2 {
-  font-family: 'Harry P', Georgia, serif;
-  color: #d4af37;
-  margin-bottom: 15px;
-}
-
-main h1 {
-  font-size: 2.5em;
-}
-
-main h2 {
-  font-size: 1.8em;
-}
-
-main p {
-  font-size: 1.1em;
-  line-height: 1.6;
 }
 
 .botao-magico {
@@ -178,58 +176,4 @@ footer {
   nav.mobile-menu ul li ul {
     position: static;
   }
-
-  main h1 {
-    font-size: 1.8em;
-  }
-
-  main h2 {
-    font-size: 1.4em;
-  }
-
-  main p {
-    font-size: 1em;
-  }
-}
-
-/* Submenu oculto */
-.submenu {
-  display: none;
-  flex-direction: column;
-  background-color: #003300;
-  border-left: 4px solid #d4af37;
-  margin-left: 15px;
-  padding-left: 10px;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.has-submenu .submenu-toggle {
-  background: none;
-  border: none;
-  font-weight: bold;
-  padding: 10px 15px;
-  color: #d4af37;
-  text-align: left;
-  width: 100%;
-  font-size: 1em;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.has-submenu .submenu-toggle:hover {
-  background-color: #004d00;
-}
-
-.submenu-toggle .seta {
-  transition: transform 0.3s ease;
-}
-
-.has-submenu.open .submenu {
-  display: flex;
-}
-
-.has-submenu.open .submenu-toggle .seta {
-  transform: rotate(180deg);
 }
