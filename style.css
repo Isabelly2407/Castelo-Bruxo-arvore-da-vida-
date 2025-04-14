@@ -5,11 +5,9 @@
 
 body {
   margin: 0;
-  font-family: Georgia, serif;
-  background-image: url("pergaminho.png");
-  background-size: cover;
-  background-attachment: fixed;
-  color: #003300;
+  font-family: Arial, sans-serif;
+  background-color: #f7f3e9; /* fundo amarelo papel velho */
+  color: #000;
 }
 
 header.cabecalho {
@@ -20,145 +18,127 @@ header.cabecalho {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 
-header.cabecalho .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 12px;
-}
-
-header.cabecalho h1 {
-  margin: 0;
-  font-size: 2.5em;
-  font-family: 'HarryP', serif;
-  color: #d4af37;
-  animation: textGlow 1.5s ease-in-out infinite alternate;
-}
-
-header.cabecalho p {
-  font-size: 1.2em;
-  margin-top: 10px;
-  color: #f3e2b4;
-}
-
-@keyframes textGlow {
-  0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37; }
-  100% { text-shadow: 0 0 20px #d4af37, 0 0 40px #d4af37; }
-}
-
-main.conteudo {
-  background-color: #f3e2b4;
-  margin: 20px;
+header .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
   border-radius: 10px;
 }
 
-footer {
-  background-color: rgba(0, 100, 0, 0.9);
+header h1 {
+  font-family: 'HarryP', serif;
+  font-size: 3em;
   color: #d4af37;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
+  margin: 0;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
+  animation: brilho 2s ease-in-out infinite alternate;
 }
 
-/* Menu */
-#menu-toggle {
-  display: none;
+@keyframes brilho {
+  0% {
+    text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
+  }
+  100% {
+    text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
+  }
+}
+
+header p {
+  color: #f5e8c7;
+  font-size: 1.2em;
+  margin-top: 10px;
 }
 
 .menu-icon {
   display: none;
-  font-size: 26px;
   padding: 10px;
-  background-color: #004000;
-  color: #d4af37;
+  background-color: #004225;
+  color: #fff;
   cursor: pointer;
-  text-align: center;
+  font-size: 1.2em;
+}
+
+nav.mobile-menu {
+  background-color: #006b3c;
+  color: #fff;
+  padding: 10px 0;
 }
 
 nav.mobile-menu ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  background-color: rgba(0, 100, 0, 0.9);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: 0;
 }
 
-nav.mobile-menu ul li {
-  position: relative;
+nav.mobile-menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-nav.mobile-menu ul li a {
+nav.mobile-menu a {
   display: block;
-  padding: 10px 15px;
+  padding: 10px 20px;
   text-decoration: none;
-  color: #d4af37;
-  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s;
 }
 
-nav.mobile-menu ul li:hover > a {
-  background-color: #006400;
+nav.mobile-menu a:hover {
+  background-color: #004d2a;
 }
 
-nav.mobile-menu ul li ul {
+nav.mobile-menu .has-submenu ul {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0, 100, 0, 0.95);
-  min-width: 200px;
-  z-index: 1000;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  background-color: #004225;
 }
 
-nav.mobile-menu ul li.open > ul {
+nav.mobile-menu .has-submenu.open ul {
   display: block;
-  max-height: 500px;
-}
-
-nav.mobile-menu ul li ul li a:hover {
-  background-color: #004d00;
 }
 
 .submenu-toggle {
-  margin-left: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: inline-block;
+  float: right;
 }
 
-nav.mobile-menu ul li.open .submenu-toggle {
-  transform: rotate(180deg);
+#menu-toggle {
+  display: none;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .menu-icon {
     display: block;
   }
 
-  nav.mobile-menu ul {
+  nav.mobile-menu {
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
-  #menu-toggle:checked + .menu-icon + nav.mobile-menu ul {
-    display: flex;
+  #menu-toggle:checked + .menu-icon + nav.mobile-menu {
+    display: block;
   }
+}
 
-  nav.mobile-menu ul li {
-    width: 100%;
-  }
+main.conteudo {
+  padding: 20px;
+  background-color: #fef9e7; /* papel velho mais claro */
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
 
-  nav.mobile-menu ul li ul {
-    position: static;
-  }
-    }
+main h2 {
+  font-family: 'HarryP', serif;
+  color: #004225;
+  text-align: center;
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #004225;
+  color: #fff;
+  font-size: 0.9em;
+}
