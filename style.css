@@ -1,14 +1,14 @@
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background-image: url('fundo-pergaminho.png');
+  background-image: url ("pergaminho.png");
   background-size: cover;
   background-attachment: fixed;
   color: #003300;
 }
 
-header.cabecalho {
-  background-image: url ('banner.jpg');
+header.cabeçalho {
+  background-image: url ("banner.jpg");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -20,7 +20,7 @@ header.cabecalho {
   animation: fadeIn 2s ease-out;
 }
 
-header.cabecalho .overlay {
+header.cabeçalho.overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 12px;
