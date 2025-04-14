@@ -4,11 +4,11 @@ body {
   background-image: url('fundo-pergaminho.png');
   background-size: cover;
   background-attachment: fixed;
-  color: #003300;
+  color: #f3e2b4;
 }
 
 header.cabecalho {
-  background-image: url('banner.jpg');
+  background-image: url ('banner.jpg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -37,7 +37,7 @@ header.cabecalho h1 {
 header.cabecalho p {
   font-size: 1.2em;
   margin-top: 10px;
-  color: #f0e68c;
+  color: ##f3e2b4;
 }
 
 @keyframes fadeIn {
@@ -51,7 +51,7 @@ header.cabecalho p {
 }
 
 main.conteudo {
-  background-color: #fdf5d1;
+  background-color: ##f3e2b4;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
