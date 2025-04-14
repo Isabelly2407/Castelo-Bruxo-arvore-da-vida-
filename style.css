@@ -191,3 +191,45 @@ footer {
     font-size: 1em;
   }
 }
+
+/* Submenu oculto */
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: #003300;
+  border-left: 4px solid #d4af37;
+  margin-left: 15px;
+  padding-left: 10px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.has-submenu .submenu-toggle {
+  background: none;
+  border: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: #d4af37;
+  text-align: left;
+  width: 100%;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.has-submenu .submenu-toggle:hover {
+  background-color: #004d00;
+}
+
+.submenu-toggle .seta {
+  transition: transform 0.3s ease;
+}
+
+.has-submenu.open .submenu {
+  display: flex;
+}
+
+.has-submenu.open .submenu-toggle .seta {
+  transform: rotate(180deg);
+}
