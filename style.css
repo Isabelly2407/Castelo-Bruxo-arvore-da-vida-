@@ -1,17 +1,21 @@
+/* Fonte personalizada */
+@font-face {
+  font-family: 'HarryP';
+  src: url('HarryP.woff') format('woff');
+}
+
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background-image: url('pergaminho-parallax.jpg');
+  background-image: url('pergaminho.png');
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
   color: #d4af37;
 }
 
-/* Cabeçalho com banner */
+/* CABEÇALHO */
 header.cabecalho {
-  background-image: url('banner-castelobruxo.png');
+  background-image: url('banner.png');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -40,12 +44,11 @@ header.cabecalho h1 {
   font-family: 'HarryP', serif;
   color: #d4af37;
   animation: textGlow 1.5s ease-in-out infinite alternate;
-  text-shadow: 2px 2px 4px #4d3b00;
 }
 
 @keyframes textGlow {
-  0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37; }
-  100% { text-shadow: 0 0 20px #d4af37, 0 0 40px #d4af37; }
+  0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #d4af37; }
+  100% { text-shadow: 0 0 20px #d4af37, 0 0 40px #d4af37, 0 0 60px #d4af37; }
 }
 
 header.cabecalho p {
@@ -54,6 +57,7 @@ header.cabecalho p {
   color: #f0e68c;
 }
 
+/* MENU */
 #menu-toggle {
   display: none;
 }
@@ -94,6 +98,7 @@ nav.mobile-menu ul li:hover > a {
   background-color: #006400;
 }
 
+/* SUBMENU */
 nav.mobile-menu ul li ul {
   display: none;
   position: absolute;
@@ -120,6 +125,7 @@ nav.mobile-menu ul li ul li a:hover {
   background-color: #004d00;
 }
 
+/* SETAS */
 .submenu-toggle {
   margin-left: 5px;
   cursor: pointer;
@@ -130,17 +136,17 @@ nav.mobile-menu ul li.open .submenu-toggle {
   transform: rotate(180deg);
 }
 
-/* Conteúdo com fundo de papel velho */
+/* CONTEÚDO */
 main.conteudo {
-  background-color: rgba(255, 248, 220, 0.85); /* tom amarelado tipo papel velho */
+  background-color: rgba(255, 248, 220, 0.9); /* amarelado como papel velho */
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
   color: #003300;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Botões */
+/* BOTÃO */
 .botao-magico {
   display: inline-block;
   background-color: #006400;
@@ -156,7 +162,7 @@ main.conteudo {
   background-color: #004d00;
 }
 
-/* Rodapé */
+/* RODAPÉ */
 footer {
   background-color: rgba(0, 100, 0, 0.9);
   color: #d4af37;
@@ -165,7 +171,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsividade */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -188,4 +194,4 @@ footer {
   nav.mobile-menu ul li ul {
     position: static;
   }
-  }
+}
