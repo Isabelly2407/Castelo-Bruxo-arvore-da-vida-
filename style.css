@@ -1,0 +1,5 @@
+body { font-family: 'Garamond', serif; background-color: #e4efe1; color: #2d3c2e; padding: 20px; }
+nav ul { list-style-type: none; padding: 0; }
+nav ul li { display: inline; margin-right: 10px; }
+nav a { color: #3b6b4d; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
