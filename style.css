@@ -13,6 +13,11 @@ header {
   text-shadow: 2px 2px 4px #000;
 }
 
+header h1 {
+  font-family: 'Harry P', serif;
+  color: #d4af37;
+}
+
 /* Fundo de pergaminho para todo o corpo da página */
 body {
   background-image: url('pergaminho.jpg');
