@@ -1,0 +1,37 @@
+
+/* Banner no topo */
+header {
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bfa940;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Fundo de pergaminho para todo o corpo da página */
+body {
+  background-image: url('pergaminho.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Georgia', serif;
+  color: #083c00;
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteúdo com moldura e transparência */
+.main-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
