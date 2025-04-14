@@ -1,21 +1,14 @@
-/* Fonte personalizada */
-@font-face {
-  font-family: 'HarryP';
-  src: url('HarryP.woff') format('woff');
-}
-
 body {
   margin: 0;
   font-family: Georgia, serif;
-  background-image: url('pergaminho.png');
+  background-image: url('fundo-pergaminho.png');
   background-size: cover;
   background-attachment: fixed;
-  color: #d4af37;
+  color: #003300;
 }
 
-/* CABEÇALHO */
 header.cabecalho {
-  background-image: url('banner.png');
+  background-image: url('banner.jpg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -27,13 +20,8 @@ header.cabecalho {
   animation: fadeIn 2s ease-out;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
 header.cabecalho .overlay {
-  background-color: rgba(0, 100, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 12px;
 }
@@ -46,18 +34,38 @@ header.cabecalho h1 {
   animation: textGlow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes textGlow {
-  0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #d4af37; }
-  100% { text-shadow: 0 0 20px #d4af37, 0 0 40px #d4af37, 0 0 60px #d4af37; }
-}
-
 header.cabecalho p {
   font-size: 1.2em;
   margin-top: 10px;
   color: #f0e68c;
 }
 
-/* MENU */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37; }
+  100% { text-shadow: 0 0 20px #d4af37, 0 0 40px #d4af37; }
+}
+
+main.conteudo {
+  background-color: #fdf5d1;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: rgba(0, 100, 0, 0.9);
+  color: #d4af37;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* Menu */
 #menu-toggle {
   display: none;
 }
@@ -98,7 +106,6 @@ nav.mobile-menu ul li:hover > a {
   background-color: #006400;
 }
 
-/* SUBMENU */
 nav.mobile-menu ul li ul {
   display: none;
   position: absolute;
@@ -117,61 +124,22 @@ nav.mobile-menu ul li.open > ul {
   max-height: 500px;
 }
 
-nav.mobile-menu ul li ul li a {
-  padding: 10px;
-}
-
 nav.mobile-menu ul li ul li a:hover {
   background-color: #004d00;
 }
 
-/* SETAS */
 .submenu-toggle {
   margin-left: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 nav.mobile-menu ul li.open .submenu-toggle {
   transform: rotate(180deg);
 }
 
-/* CONTEÚDO */
-main.conteudo {
-  background-color: rgba(255, 248, 220, 0.9); /* amarelado como papel velho */
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  color: #003300;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-/* BOTÃO */
-.botao-magico {
-  display: inline-block;
-  background-color: #006400;
-  color: #d4af37;
-  padding: 10px 20px;
-  margin: 10px 0;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.botao-magico:hover {
-  background-color: #004d00;
-}
-
-/* RODAPÉ */
-footer {
-  background-color: rgba(0, 100, 0, 0.9);
-  color: #d4af37;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
-}
-
-/* RESPONSIVO */
+/* Responsivo */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
