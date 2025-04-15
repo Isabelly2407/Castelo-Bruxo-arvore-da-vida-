@@ -12,6 +12,45 @@
       src: url('HarryP.woff') format('woff');
     }
 
+    .banner-completo {
+      width: 100%;
+      height: 300px;
+      background-image: url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .banner-completo::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .conteudo-banner {
+      position: relative;
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .conteudo-banner h2 {
+      font-size: 2.5rem;
+      font-family: 'HarryP', cursive;
+      margin: 0;
+    }
+
+    .conteudo-banner p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
@@ -72,6 +111,13 @@
       </li>
     </ul>
   </nav>
+
+  <section class="banner-completo">
+    <div class="conteudo-banner">
+      <h2>Bem-vindo ao Castelo Bruxo</h2>
+      <p>Onde a floresta é mágica e o conhecimento floresce.</p>
+    </div>
+  </section>
 
   <main class="conteudo">
     <h2>Descubra os Segredos de Castelobruxo</h2>
