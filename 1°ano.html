@@ -1,225 +1,55 @@
-/* Definições gerais */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f1f1f1;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Cabeçalho */
-header.cabecalho {
-  background-image: url('imagem-de-fundo-castelo-maia.jpg'); /* Imagem do castelo de Castelobruxo */
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-header.cabecalho .overlay {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-h1.titulo-principal {
-  font-size: 3em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-/* Estilo para Feitiços de 1º Ano - Cores Frias (Roxo, Azul, Verde) */
-main.conteudo-1 {
-  background-color: #e0f7fa;  /* Azul claro */
-  padding: 40px;
-  border-radius: 10px;
-  margin-top: -60px;
-}
-
-h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 15px;
-  text-align: center;
-}
-
-th {
-  background-color: #4a90e2;
-  color: #fff;
-}
-
-td {
-  background-color: #f9f9f9;
-}
-
-tr:nth-child(even) td {
-  background-color: #f1f1f1;
-}
-
-/* Estilo para Feitiços de 2º Ano - Transição para cores quentes */
-main.conteudo-2 {
-  background-color: #fff9c4;  /* Amarelo suave */
-  padding: 40px;
-  border-radius: 10px;
-}
-
-h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Estilo para Feitiços de 3º e 4º Ano - Cores Quentes (Vermelho, Amarelo, Laranja) */
-main.conteudo-3-4 {
-  background-color: #ffeb3b;  /* Amarelo vibrante */
-  padding: 40px;
-  border-radius: 10px;
-  margin-top: -60px;
-}
-
-h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Estilo para Feitiços de 5º Ano - Mistura de Tons */
-main.conteudo-5 {
-  background-color: #ff7043;  /* Laranja suave */
-  padding: 40px;
-  border-radius: 10px;
-  margin-top: -60px;
-}
-
-h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Estilo para Feitiços de 6º e 7º Ano - Tons mais neutros */
-main.conteudo-6-7 {
-  background-color: #ff5722;  /* Vermelho mais escuro */
-  padding: 40px;
-  border-radius: 10px;
-  margin-top: -60px;
-}
-
-h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Estilo para Feitiços Avançados - Tons Neutros (Preto e Cinza Escuro) */
-main.conteudo-avancado {
-  background-color: #424242;  /* Cinza escuro */
-  padding: 40px;
-  border-radius: 10px;
-  margin-top: -60px;
-}
-
-h2 {
-  font-size: 2em;
-  color: #fff;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Estilo para as tabelas */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 15px;
-  text-align: center;
-}
-
-th {
-  background-color: #333;
-  color: #fff;
-}
-
-td {
-  background-color: #f1f1f1;
-}
-
-tr:nth-child(even) td {
-  background-color: #eaeaea;
-}
-
-/* Rodapé */
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-/* Efeitos de hover */
-a:hover, th:hover {
-  color: #ff8c00;
-  cursor: pointer;
-}
-
-a:focus, th:focus {
-  outline: none;
-  background-color: #ff8c00;
-}
-
-/* Ajuste responsivo */
-@media (max-width: 768px) {
-  h1.titulo-principal {
-    font-size: 2.5em;
-  }
-
-  main.conteudo {
-    padding: 20px;
-  }
-
-  table {
-    font-size: 0.9em;
-  }
-
-  footer {
-    font-size: 0.8em;
-  }
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>1°ano</title>
+  <style>
+    body {
+      margin: 0;
+      background-image: url('fundo-pergaminho.png');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: Georgia, serif;
+      color: #d4af37;
+    }
+    header {
+      background-color: rgba(0, 100, 0, 0.9);
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      border-bottom: 3px solid #d4af37;
+    }
+    .content {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 900px;
+      color: #003300;
+    }
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: rgba(0, 100, 0, 0.9);
+      color: #d4af37;
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>1°ano</header>
+  <div class="content">
+    <h2>Botos</h2>
+    <p>Conteúdo da página primeiro ano. Adicione informações específicas sobre este tópico.</p>
+  </div>
+  <footer>Castelo Bruxo - Subcategoria</footer>
+</body>
+</html>
