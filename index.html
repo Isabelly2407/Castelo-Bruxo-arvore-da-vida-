@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <heade>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +12,23 @@
       src: url('HarryP.woff') format('woff');
     }
 
-<section class="banner-completo">
-    <div class="conteudo-banner">
-      <h2>Bem-vindo ao Castelo Bruxo</h2>
-      <p>Onde a floresta é mágica e o conhecimento floresce.</p>
-    </div>
-  </section>
-    
+    .banner-completo {
+      width: 100%;
+      background: url('images/banner.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .conteudo-banner h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .conteudo-banner p {
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
@@ -31,53 +39,20 @@
     </div>
   </header>
 
+  <!-- Banner -->
+  <section class="banner-completo">
+    <div class="conteudo-banner">
+      <h2>Bem-vindo ao Castelo Bruxo</h2>
+      <p>Onde a floresta é mágica e o conhecimento floresce.</p>
+    </div>
+  </section>
+
   <input type="checkbox" id="menu-toggle">
   <label class="menu-icon" for="menu-toggle"><i class="fas fa-wand-sparkles"></i> Menu</label>
 
   <nav class="mobile-menu">
     <ul>
-      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
-      <li><a href="grade.html"><i class="fas fa-calendar-alt"></i> Grade Horária</a></li>
-      <li class="has-submenu">
-        <a href="#"><i class="fas fa-wand-magic-sparkles"></i> Varinhas <span class="submenu-toggle">▼</span></a>
-        <ul>
-          <li><a href="nucleos.html">Núcleos de Varinha</a></li>
-          <li><a href="madeiras.html">Madeiras para Varinha</a></li>
-        </ul>
-      </li>
-      <li class="has-submenu">
-        <a href="patronos.html"><i class="fas fa-paw"></i> Patronos <span class="submenu-toggle">▼</span></a>
-        <ul>
-          <li><a href="comuns.html">Animais Comuns</a></li>
-          <li><a href="miticos.html">Animais Míticos</a></li>
-        </ul>
-      </li>
-      <li class="has-submenu">
-        <a href="#"><i class="fas fa-tshirt"></i> Uniforme <span class="submenu-toggle">▼</span></a>
-        <ul>
-          <li><a href="feminino.html">Uniforme Feminino</a></li>
-          <li><a href="masculino.html">Uniforme Masculino</a></li>
-        </ul>
-      </li>
-      <li><a href="historia.html"><i class="fas fa-landmark"></i> História</a></li>
-      <li class="has-submenu">
-        <a href="#"><i class="fas fa-dragon"></i> Casas <span class="submenu-toggle">▼</span></a>
-        <ul>
-          <li><a href="jaguares.html">Jaguares</a></li>
-          <li><a href="gavios.html">Gaviões Reais</a></li>
-          <li><a href="rupicola.html">Rupicola</a></li>
-          <li><a href="botos.html">Botos</a></li>
-        </ul>
-      </li>
-      <li><a href="personagens.html"><i class="fas fa-user"></i> Personagens</a></li>
-      <li><a href="magias.html"><i class="fas fa-star"></i> Magias</a></li>
-      <li class="has-submenu">
-        <a href="#"><i class="fas fa-spider"></i> Criaturas <span class="submenu-toggle">▼</span></a>
-        <ul>
-          <li><a href="fauna-comum.html">Fauna Comum</a></li>
-          <li><a href="fauna-magica.html">Fauna Mágica</a></li>
-        </ul>
-      </li>
+      <!-- ... seu menu continua aqui ... -->
     </ul>
   </nav>
 
