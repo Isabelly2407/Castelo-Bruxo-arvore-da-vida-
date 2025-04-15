@@ -1,266 +1,129 @@
-<!DOCTYPE html><html lang="pt-br">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Castelo Bruxo e a Árvore da Vida</title>  
-  <link href="style.css" rel="stylesheet" />  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
-  <style>  
-    @font-face {
-      font-family: 'HarryP';
-      src: url('HarryP.woff') format('woff');
-    }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Castelo Bruxo e a Árvore da Vida</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="overlay">
+      <h1 class="titulo-principal">Castelo Bruxo e a Árvore da Vida</h1>
+      <p class="subtitulo">A magia da floresta vive aqui</p>
+    </div>
+  </header>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f7f3e0;
-      color: #000;
-      animation: fadeIn 1s ease-in;
-    }
+  <input type="checkbox" id="menu-toggle">
+  <label class="menu-icon" for="menu-toggle"><i class="fas fa-wand-sparkles"></i> Menu</label>
+  <nav class="mobile-menu">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-calendar-alt"></i> Grade Horária <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="#">1° ano</a></li>
+          <li><a href="#">2° ano</a></li>
+          <li><a href="#">3° ano</a></li>
+          <li><a href="#">4° ano</a></li>
+          <li><a href="#">5° ano</a></li>
+          <li><a href="#">6° ano</a></li>
+          <li><a href="#">7° ano</a></li>
+        </ul>
+      </li>
 
-    header.cabecalho {
-      background-image: url("banner.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.4);
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-wand-magic-sparkles"></i> Varinhas <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="nucleos.html">Núcleos de Varinha</a></li>
+          <li><a href="madeiras.html">Madeiras para Varinha</a></li>
+        </ul>
+      </li>
 
-    header .overlay {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px;
-      border-radius: 10px;
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-paw"></i> Patronos <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="comuns.html">Animais Comuns</a></li>
+          <li><a href="miticos.html">Animais Míticos</a></li>
+        </ul>
+      </li>
 
-    header h1 {
-      font-family: 'HarryP', serif;
-      font-size: 3em;
-      color: #d4af37;
-      margin: 0;
-      text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
-      animation: brilho 2s ease-in-out infinite alternate;
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-tshirt"></i> Uniforme <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="feminino.html">Uniforme Feminino</a></li>
+          <li><a href="masculino.html">Uniforme Masculino</a></li>
+        </ul>
+      </li>
 
-    @keyframes brilho {
-      0% {
-        text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
-      }
-      100% {
-        text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
-      }
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-landmark"></i> História <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="#">Fundação</a></li>
+          <li><a href="#">Fundação de Castelo Bruxo</a></li>
+        </ul>
+      </li>
 
-    header p {
-      color: #f5e8c7;
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-dragon"></i> Casas <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="jaguares.html">Jaguares</a></li>
+          <li><a href="gavios.html">Gaviões Reais</a></li>
+          <li><a href="rupicola.html">Rupicola</a></li>
+          <li><a href="botos.html">Botos</a></li>
+        </ul>
+      </li>
 
-    .menu-icon {
-      display: none;
-      padding: 10px;
-      background-color: #006400;
-      color: #fff;
-      cursor: pointer;
-      font-size: 1.2em;
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-user"></i> Personagens <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="#">Isabelly</a></li>
+        </ul>
+      </li>
 
-    nav.mobile-menu {
-      background-color: #006400;
-      color: #fff;
-      padding: 10px 0;
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-star"></i> Magias <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="#">Feitiços e Poções do 1° ano</a></li>
+          <li><a href="#">Feitiços e Poções do 2° ano</a></li>
+          <li><a href="#">Feitiços e Poções do 3° ano</a></li>
+          <li><a href="#">Feitiços e Poções do 4° ano</a></li>
+          <li><a href="#">Feitiços e Poções do 5° ano</a></li>
+          <li><a href="#">Feitiços e Poções do 6° ano</a></li>
+          <li><a href="#">Feitiços e Poções do 7° ano</a></li>
+          <li><a href="#">Avançado</a></li>
+        </ul>
+      </li>
 
-    nav.mobile-menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+      <li class="has-submenu">
+        <span><i class="fas fa-spider"></i> Criaturas <span class="submenu-toggle">▼</span></span>
+        <ul>
+          <li><a href="fauna-comum.html">Fauna Comum</a></li>
+          <li><a href="fauna-magica.html">Fauna Mágica</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-    nav.mobile-menu li {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease-in-out;
-    }
+  <main class="conteudo">
+    <h2>Descubra os Segredos de CasteloBruxo</h2>
+    <p>CasteloBruxo é um RPG escolar situado na floresta amazônica. Com casas inspiradas na fauna brasileira e magias baseadas em mitologia e saberes sul-americanos, ele oferece uma experiência única onde o jogador vivencia a jornada de um bruxo brasileiro em formação. Explore, aprenda, descubra e se conecte com a natureza e o mistério.</p>
+  </main>
 
-    nav.mobile-menu a {
-      display: block;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: #fff;
-      background-color: #006400;
-      transition: background-color 0.3s;
-    }
+  <footer>
+    © 2054 Castelo Bruxo - Todos os direitos reservados
+  </footer>
 
-    nav.mobile-menu a:hover {
-      background-color: #004d00;
-    }
-
-    nav.mobile-menu .has-submenu ul {
-      display: none;
-      background-color: #338a4c;
-      animation: slideDown 0.3s ease-in-out forwards;
-    }
-
-    nav.mobile-menu .has-submenu.open ul {
-      display: block;
-    }
-
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    nav.mobile-menu .has-submenu ul li a {
-      background-color: #5fb97c;
-    }
-
-    .submenu-toggle {
-      float: right;
-    }
-
-    #menu-toggle {
-      display: none;
-    }
-
-    @media screen and (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
-      nav.mobile-menu {
-        display: none;
-      }
-
-      #menu-toggle:checked + .menu-icon + nav.mobile-menu {
-        display: block;
-      }
-
-      header.cabecalho {
-        height: 250px;
-      }
-
-      header h1 {
-        font-size: 2.2em;
-      }
-
-      header p {
-        font-size: 1em;
-      }
-    }
-
-    main.conteudo {
-      padding: 20px;
-      background-color: #fff7d5;
-      margin: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      animation: fadeIn 1s ease-in;
-    }
-
-    main h2 {
-      font-family: 'HarryP', serif;
-      color: #004225;
-      text-align: center;
-      margin-top: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #004225;
-      color: #fff;
-      font-size: 0.9em;
-      animation: fadeIn 2s ease-in;
-    }
-  </style>  
-</head>  
-<body>  
-  <header class="cabecalho">  
-    <div class="overlay">  
-      <h1 class="titulo-principal">Castelo Bruxo e a Árvore da Vida</h1>  
-      <p class="subtitulo">A magia da floresta vive aqui</p>  
-    </div>  
-  </header>  
-  <input type="checkbox" id="menu-toggle">  
-  <label class="menu-icon" for="menu-toggle"><i class="fas fa-wand-sparkles"></i> Menu</label>  
-  <nav class="mobile-menu">  
-    <ul>  
-      <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>  
-      <li><a href="grade.html"><i class="fas fa-calendar-alt"></i> Grade Horária</a></li>  
-      <li class="has-submenu">  
-        <a href="#"><i class="fas fa-wand-magic-sparkles"></i> Varinhas <span class="submenu-toggle">▼</span></a>  
-        <ul>  
-          <li><a href="nucleos.html">Núcleos de Varinha</a></li>  
-          <li><a href="madeiras.html">Madeiras para Varinha</a></li>  
-        </ul>  
-      </li>  
-      <li class="has-submenu">  
-        <a href="patronos.html"><i class="fas fa-paw"></i> Patronos <span class="submenu-toggle">▼</span></a>  
-        <ul>  
-          <li><a href="comuns.html">Animais Comuns</a></li>  
-          <li><a href="miticos.html">Animais Míticos</a></li>  
-        </ul>  
-      </li>  
-      <li class="has-submenu">  
-        <a href="#"><i class="fas fa-tshirt"></i> Uniforme <span class="submenu-toggle">▼</span></a>  
-        <ul>  
-          <li><a href="feminino.html">Uniforme Feminino</a></li>  
-          <li><a href="masculino.html">Uniforme Masculino</a></li>  
-        </ul>  
-      </li>  
-      <li><a href="historia.html"><i class="fas fa-landmark"></i> História</a></li>  
-      <li class="has-submenu">  
-        <a href="#"><i class="fas fa-dragon"></i> Casas <span class="submenu-toggle">▼</span></a>  
-        <ul>  
-          <li><a href="jaguares.html">Jaguares</a></li>  
-          <li><a href="gavios.html">Gaviões Reais</a></li>  
-          <li><a href="rupicola.html">Rupicola</a></li>  
-          <li><a href="botos.html">Botos</a></li>  
-        </ul>  
-      </li>  
-      <li><a href="personagens.html"><i class="fas fa-user"></i> Personagens</a></li>  
-      <li><a href="magias.html"><i class="fas fa-star"></i> Magias</a></li>  
-      <li class="has-submenu">  
-        <a href="#"><i class="fas fa-spider"></i> Criaturas <span class="submenu-toggle">▼</span></a>  
-        <ul>  
-          <li><a href="fauna-comum.html">Fauna Comum</a></li>  
-          <li><a href="fauna-magica.html">Fauna Mágica</a></li>  
-        </ul>  
-      </li>  
-    </ul>  
-  </nav>  
-  <main class="conteudo">  
-    <h2>Descubra os Segredos de CasteloBruxo</h2>  
-    <p>CasteloBruxo é um RPG escolar situado na floresta amazônica. Com casas inspiradas na fauna brasileira e magias baseadas em mitologia e saberes sul-americanos, ele oferece uma experiência única onde o jogador vivencia a jornada de um bruxo brasileiro em formação. Explore, aprenda, descubra e se conecte com a natureza e o mistério.</p>  
-  </main>  
-  <footer>  
-    © 2054 Castelo Bruxo - Todos os direitos reservados  
-  </footer>  
-  <script>  
-    document.querySelectorAll('.submenu-toggle').forEach(toggle => {  
-      toggle.addEventListener('click', e => {  
-        e.preventDefault();  
-        const li = toggle.closest('li');  
-        li.classList.toggle('open');  
-      });  
-    });  
-  </script>  
-</body>  
+  <script>
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', e => {
+        const li = toggle.closest('li');
+        li.classList.toggle('open');
+        toggle.classList.toggle('rotated');
+      });
+    });
+  </script>
+</body>
 </html>
