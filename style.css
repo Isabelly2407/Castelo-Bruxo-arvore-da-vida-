@@ -45,12 +45,8 @@ header h1 {
 }
 
 @keyframes brilho {
-  0% {
-    text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
-  }
-  100% {
-    text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
-  }
+  0% { text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37; }
+  100% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; }
 }
 
 header p {
@@ -85,6 +81,13 @@ nav.mobile-menu li {
   transition: all 0.3s ease-in-out;
 }
 
+nav.mobile-menu li > span {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
 nav.mobile-menu a {
   display: block;
   padding: 10px 20px;
@@ -100,23 +103,17 @@ nav.mobile-menu a:hover {
 
 nav.mobile-menu .has-submenu ul {
   display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
   background-color: #338a4c;
-  animation: slideDown 0.3s ease-in-out forwards;
 }
 
 nav.mobile-menu .has-submenu.open ul {
   display: block;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  max-height: 1000px;
+  opacity: 1;
 }
 
 nav.mobile-menu .has-submenu ul li a {
@@ -125,6 +122,11 @@ nav.mobile-menu .has-submenu ul li a {
 
 .submenu-toggle {
   float: right;
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
 }
 
 #menu-toggle {
@@ -180,4 +182,4 @@ footer {
   color: #fff;
   font-size: 0.9em;
   animation: fadeIn 2s ease-in;
-}
+  }
