@@ -82,7 +82,8 @@ nav.mobile-menu li {
 }
 
 nav.mobile-menu li > span {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 10px 20px;
   color: #fff;
   cursor: pointer;
@@ -121,7 +122,7 @@ nav.mobile-menu .has-submenu ul li a {
 }
 
 .submenu-toggle {
-  float: right;
+  margin-left: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -182,4 +183,4 @@ footer {
   color: #fff;
   font-size: 0.9em;
   animation: fadeIn 2s ease-in;
-  }
+}
