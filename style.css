@@ -12,7 +12,7 @@ body {
 
 /* NOVO BANNER COM IMAGEM EXTERNA */
 header.cabecalho {
-  background-image: url("banner.jpg");
+  background-image: url("https://harrypotter.fandom.com/wiki/Talk:Castelobruxo?file=Wizarding-School-Map-Castelobruxo.jpg");
   background-size: cover;
   background-position: center;
   height: 350px;
