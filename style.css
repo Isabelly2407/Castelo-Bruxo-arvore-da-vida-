@@ -1,7 +1,18 @@
+@font-face {
+  font-family: 'HarryP';
+  src: url('HarryP.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f3e9; /* fundo amarelo papel velho */
+  color: #000;
+}
 
 /* NOVO BANNER COM IMAGEM EXTERNA */
 header.cabecalho {
-  background-image: url("banner.jpg");
+  background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0");
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -17,18 +28,6 @@ header .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
   border-radius: 10px;
-}
-
-@font-face {
-  font-family: 'HarryP';
-  src: url('HarryP.woff') format('woff');
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f7f3e9; /* fundo amarelo papel velho */
-  color: #000;
 }
 
 header h1 {
