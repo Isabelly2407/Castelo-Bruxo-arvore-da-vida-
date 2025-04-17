@@ -12,13 +12,43 @@
       font-family: Georgia, serif;
       color: #d4af37;
     }
-    header {
-      background-color: rgba(0, 100, 0, 0.9);
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
+
+    .faixa-superior {
+      background-color: rgba(0, 100, 0, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
       border-bottom: 3px solid #d4af37;
     }
+
+    .botao-voltar {
+      color: #d4af37;
+      text-decoration: none;
+      font-family: 'Harry P', Georgia, serif;
+      font-size: 28px;
+      border: 2px solid #d4af37;
+      padding: 8px 16px;
+      border-radius: 10px;
+      background-color: transparent;
+      box-shadow: 0 0 10px #d4af37;
+      transition: all 0.3s ease;
+    }
+
+    .botao-voltar:hover {
+      background-color: #228B22;
+      color: black;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px gold;
+    }
+
+    .titulo-pagina {
+      color: #d4af37;
+      font-size: 28px;
+      font-family: 'Harry P', Georgia, serif;
+      margin: 0;
+    }
+
     .content {
       background-color: rgba(255, 255, 255, 0.85);
       margin: 30px auto;
@@ -28,13 +58,16 @@
       max-width: 900px;
       color: #003300;
     }
+
     a {
       color: #d4af37;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       background-color: rgba(0, 100, 0, 0.9);
       color: #d4af37;
@@ -42,14 +75,36 @@
       padding: 10px;
       margin-top: 50px;
     }
+
+    @media (max-width: 600px) {
+      .faixa-superior {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .botao-voltar {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .titulo-pagina {
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>Uniforme Feminino</header>
+  <div class="faixa-superior">
+    <a href="javascript:history.back()" class="botao-voltar">← Voltar</a>
+    <h1 class="titulo-pagina">Uniforme Feminino</h1>
+  </div>
+
   <div class="content">
     <h2>Uniforme Feminino</h2>
     <p>Conteúdo da página Uniforme Feminino. Adicione informações específicas sobre este tópico.</p>
   </div>
+
   <footer>Castelo Bruxo - Subcategoria</footer>
 </body>
 </html>
