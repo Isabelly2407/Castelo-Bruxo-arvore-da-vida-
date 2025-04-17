@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Animais Comuns</title>
   <style>
     body {
@@ -10,15 +10,34 @@
       background-size: cover;
       background-attachment: fixed;
       font-family: Georgia, serif;
-      color: #d4af37;
     }
+
     header {
       background-color: rgba(0, 100, 0, 0.9);
+      color: #d4af37;
       padding: 20px;
-      text-align: center;
-      font-size: 28px;
       border-bottom: 3px solid #d4af37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-size: 28px;
     }
+
+    .voltar {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 24px;
+      color: #d4af37;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .voltar:hover {
+      transform: scale(1.1);
+    }
+
     .content {
       background-color: rgba(255, 255, 255, 0.85);
       margin: 30px auto;
@@ -28,13 +47,7 @@
       max-width: 900px;
       color: #003300;
     }
-    a {
-      color: #d4af37;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+
     footer {
       background-color: rgba(0, 100, 0, 0.9);
       color: #d4af37;
@@ -45,11 +58,16 @@
   </style>
 </head>
 <body>
-  <header>Animais Comuns</header>
+  <header>
+    <a href="index.html" class="voltar">&#8592;</a>
+    Animais Comuns
+  </header>
+
   <div class="content">
-    <h2>Animais Comuns</h2>
-    <p>Conteúdo da página Animais Comuns. Adicione informações específicas sobre este tópico.</p>
+    <!-- Conteúdo original mantido -->
+    <p>Conteúdo da página Animais Comuns.</p>
   </div>
+
   <footer>Castelo Bruxo - Subcategoria</footer>
 </body>
 </html>
