@@ -15,14 +15,17 @@
 
     .faixa-superior {
       background-color: rgba(0, 100, 0, 0.95);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      position: relative;
       padding: 20px 40px;
       border-bottom: 3px solid #d4af37;
+      text-align: center;
     }
 
     .botao-voltar {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
       color: #d4af37;
       text-decoration: none;
       font-family: 'Harry P', Georgia, serif;
@@ -38,7 +41,7 @@
     .botao-voltar:hover {
       background-color: #228B22;
       color: black;
-      transform: scale(1.05);
+      transform: translateY(-50%) scale(1.05);
       box-shadow: 0 0 15px gold;
     }
 
@@ -77,19 +80,13 @@
     }
 
     @media (max-width: 600px) {
-      .faixa-superior {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+      .titulo-pagina {
+        font-size: 24px;
       }
 
       .botao-voltar {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      .titulo-pagina {
-        font-size: 24px;
+        font-size: 22px;
+        padding: 6px 12px;
       }
     }
   </style>
