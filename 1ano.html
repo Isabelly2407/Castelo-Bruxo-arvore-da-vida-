@@ -1,17 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1° ano</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>1º Ano</title>
+  <style>
+    body {
+      margin: 0;
+      background-image: url('fundo-pergaminho.png');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: Georgia, serif;
+      color: #d4af37;
+    }
+
+    .faixa-superior {
+      background-color: rgba(0, 100, 0, 0.95);
+      position: relative;
+      padding: 20px 40px;
+      border-bottom: 3px solid #d4af37;
+      text-align: center;
+    }
+
+    .botao-voltar {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #d4af37;
+      text-decoration: none;
+      font-family: 'Harry P', Georgia, serif;
+      font-size: 28px;
+      border: 2px solid #d4af37;
+      padding: 8px 16px;
+      border-radius: 10px;
+      background-color: transparent;
+      box-shadow: 0 0 10px #d4af37;
+      transition: all 0.3s ease;
+    }
+
+    .botao-voltar:hover {
+      background-color: #228B22;
+      color: black;
+      transform: translateY(-50%) scale(1.05);
+      box-shadow: 0 0 15px gold;
+    }
+
+    .titulo-pagina {
+      color: #d4af37;
+      font-size: 28px;
+      font-family: 'Harry P', Georgia, serif;
+      margin: 0;
+    }
+
+    .content {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 900px;
+      color: #003300;
+    }
+
+    footer {
+      background-color: rgba(0, 100, 0, 0.9);
+      color: #d4af37;
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .titulo-pagina {
+        font-size: 24px;
+      }
+
+      .botao-voltar {
+        font-size: 22px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>1° ano</h1>
-    </header>
-    <main>
-        <p>Conteúdo da página: 1° ano</p>
-    </main>
+
+  <div class="faixa-superior">
+    <a href="javascript:history.back()" class="botao-voltar">← Voltar</a>
+    <h1 class="titulo-pagina">1º Ano</h1>
+  </div>
+
+  <div class="content">
+    <h2>Grade Horária - 1º Ano</h2>
+    <p>Adicione aqui o conteúdo referente à grade horária do 1º ano.</p>
+  </div>
+
+  <footer>Castelo Bruxo - Grade Horária</footer>
 </body>
 </html>
