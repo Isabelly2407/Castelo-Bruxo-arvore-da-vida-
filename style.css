@@ -36,7 +36,7 @@ header .overlay {
 }
 
 header h1 {
-  font-family: 'HarryP', serif;
+  font-family: 'HarryP.woff', serif;
   font-size: 3em;
   color: #d4af37;
   margin: 0;
@@ -170,7 +170,7 @@ main.conteudo {
 }
 
 main h2 {
-  font-family: 'HarryP', serif;
+  font-family: 'HarryP.woff', serif;
   color: #004225;
   text-align: center;
   margin-top: 0;
